@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-df = pd.read_csv("AI_Revenue_Leak_Dataset_Processed.csv")
+df = pd.read_excel("AI_Revenue_Leak_Dataset_Processed.xls")
 
 st.title("💰 AI Revenue Leak Detector")
 
@@ -22,3 +22,4 @@ st.write("€", df_filtered['Estimated Loss'].sum())
 
 if st.checkbox("Show Full Dataset"):
     st.dataframe(df_filtered)
+
