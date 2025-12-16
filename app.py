@@ -4,18 +4,10 @@ from pathlib import Path
 
 st.set_page_config(page_title="AI Revenue Leak Detector", layout="wide")
 
-# Load dataset
 DATA_FILE = Path(__file__).parent / "AI_Revenue_Leak_Dataset_Processed.csv"
 
-# Try reading CSV normally
-df = pd.read_csv(DATA_FILE, sep=",", header=0, engine="python")
-
-# Handle case where CSV was read as a single column
-if len(df.columns) == 1:
-    # Split the first row into proper column names
-    first_row = df.columns[0]
-    new_columns = [x.strip() for x in first_row.split(",")]
-    df = pd.read_csv(DATA_FILE, sep=",", names=new_columns, header=1, engine="python")
+# Read CSV normally with correct separator
+df = pd.read_csv(DATA_FILE, sep=",", engine="python")
 
 # Normalize column names
 df.columns = df.columns.str.strip().str.replace(" ", "_")
@@ -29,10 +21,8 @@ risk_filter = st.selectbox(
 )
 
 df_filtered = df.copy()
-
-if "Client_Risk" in df_filtered.columns:
-    if risk_filter != "All":
-        df_filtered = df_filtered[df_filtered["Client_Risk"] == risk_filter]
+if "Client_Risk" in df_filtered.columns and risk_filter != "All":
+    df_filtered = df_filtered[df_filtered["Client_Risk"] == risk_filter]
 
 # Status filter
 status_filter = st.multiselect(
@@ -52,10 +42,10 @@ if "Leak_Score" in df_filtered.columns:
         use_container_width=True
     )
 
-# Revenue at risk metric
+# Revenue at risk
 if "Estimated_Loss" in df_filtered.columns:
     st.metric("Revenue at Risk (€)", f"{df_filtered['Estimated_Loss'].sum():,.0f}")
 
-# Show full dataset option
+# Show full dataset
 if st.checkbox("Show Full Dataset"):
     st.dataframe(df_filtered, use_container_width=True)
