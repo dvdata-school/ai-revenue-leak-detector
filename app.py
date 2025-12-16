@@ -4,9 +4,9 @@ from pathlib import Path
 
 st.set_page_config(page_title="AI Revenue Leak Detector", layout="wide")
 
-# Load dataset
+# Load dataset with proper CSV parsing
 DATA_FILE = Path(__file__).parent / "AI_Revenue_Leak_Dataset_Processed.csv"
-df = pd.read_csv(DATA_FILE)
+df = pd.read_csv(DATA_FILE, sep=",", header=0)
 
 # Normalize column names
 df.columns = df.columns.str.strip()               # remove leading/trailing spaces
@@ -14,9 +14,7 @@ df.columns = df.columns.str.replace(" ", "_")    # replace spaces with underscor
 
 st.title("💰 AI Revenue Leak Detector")
 
-# Check available columns
-st.write("Columns in dataset:", df.columns.tolist())
-df = pd.read_csv(DATA_FILE)
+# Debug: show actual columns (optional, can remove later)
 st.write("Columns in dataset:", df.columns.tolist())
 
 # Client Risk filter
@@ -54,7 +52,6 @@ if "Leak_Score" in df_filtered.columns:
     )
 else:
     st.warning("'Leak Score' column not found in dataset!")
-
 
 # Revenue at risk metric
 if "Estimated_Loss" in df_filtered.columns:
