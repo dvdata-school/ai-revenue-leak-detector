@@ -16,6 +16,8 @@ st.title("💰 AI Revenue Leak Detector")
 
 # Check available columns
 st.write("Columns in dataset:", df.columns.tolist())
+df = pd.read_csv(DATA_FILE)
+st.write("Columns in dataset:", df.columns.tolist())
 
 # Client Risk filter
 risk_filter = st.selectbox(
@@ -52,6 +54,7 @@ if "Leak_Score" in df_filtered.columns:
     )
 else:
     st.warning("'Leak Score' column not found in dataset!")
+
 
 # Revenue at risk metric
 if "Estimated_Loss" in df_filtered.columns:
