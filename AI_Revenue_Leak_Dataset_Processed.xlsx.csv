@@ -1,0 +1,41 @@
+Client,Invoice ID,Status,Due Date,Amount,Days Late,Follow-ups,Client Risk,Leak Score,Estimated Loss,Recommended Action
+Client_1 GmbH,INV001,Unpaid,31-12-2025,13485,24,0,High,90,12136.5,Contact client immediately & escalate
+Client_2 GmbH,INV002,Paid,20-11-2025,14274,0,0,Medium,10,1427.4,No immediate action required
+Client_3 GmbH,INV003,Paid,18-11-2025,12125,0,0,Medium,10,1212.5,No immediate action required
+Client_4 GmbH,INV004,Paid,28-12-2025,6598,0,0,Low,0,0,No immediate action required
+Client_5 GmbH,INV005,Late,30-11-2025,14216,1,4,Low,50,7108,Send follow-up reminder
+Client_6 GmbH,INV006,Unpaid,04-01-2026,8313,27,2,High,100,8313,Contact client immediately & escalate
+Client_7 GmbH,INV007,Late,04-12-2025,3916,3,2,High,30,1174.8,Monitor client & follow-up if needed
+Client_8 GmbH,INV008,Paid,21-11-2025,6752,0,0,Low,0,0,No immediate action required
+Client_9 GmbH,INV009,Unpaid,09-01-2026,3525,4,0,Low,0,0,No immediate action required
+Client_10 GmbH,INV010,Paid,30-11-2025,8168,0,0,Medium,10,816.8,No immediate action required
+Client_11 GmbH,INV011,Paid,10-01-2026,9572,0,0,Low,0,0,No immediate action required
+Client_12 GmbH,INV012,Unpaid,22-11-2025,7386,20,2,Medium,90,6647.4,Contact client immediately & escalate
+Client_13 GmbH,INV013,Paid,10-12-2025,4084,0,0,High,20,816.8,Monitor client & follow-up if needed
+Client_14 GmbH,INV014,Paid,03-12-2025,6456,0,0,High,20,1291.2,Monitor client & follow-up if needed
+Client_15 GmbH,INV015,Unpaid,15-12-2025,12292,5,3,Medium,60,7375.2,Send follow-up reminder
+Client_16 GmbH,INV016,Unpaid,26-12-2025,14762,25,1,Low,70,10333.4,Send follow-up reminder
+Client_17 GmbH,INV017,Paid,08-01-2026,8155,0,0,Medium,10,815.5,No immediate action required
+Client_18 GmbH,INV018,Unpaid,09-12-2025,6483,21,3,High,100,6483,Contact client immediately & escalate
+Client_19 GmbH,INV019,Late,26-11-2025,13738,13,0,Low,55,7555.9,Send follow-up reminder
+Client_20 GmbH,INV020,Paid,09-12-2025,11179,0,0,Medium,10,1117.9,No immediate action required
+Client_21 GmbH,INV021,Late,08-12-2025,9482,19,2,Medium,90,8533.8,Contact client immediately & escalate
+Client_22 GmbH,INV022,Unpaid,29-11-2025,13532,2,4,High,70,9472.4,Send follow-up reminder
+Client_23 GmbH,INV023,Paid,28-12-2025,10517,0,0,High,20,2103.4,Monitor client & follow-up if needed
+Client_24 GmbH,INV024,Paid,03-12-2025,5340,0,0,High,20,1068,Monitor client & follow-up if needed
+Client_25 GmbH,INV025,Late,30-12-2025,7339,12,1,Medium,65,4770.35,Send follow-up reminder
+Client_26 GmbH,INV026,Paid,14-01-2026,5287,0,0,Medium,10,528.7,No immediate action required
+Client_27 GmbH,INV027,Paid,29-12-2025,7040,0,0,Low,0,0,No immediate action required
+Client_28 GmbH,INV028,Paid,27-12-2025,12197,0,0,Medium,10,1219.7,No immediate action required
+Client_29 GmbH,INV029,Late,20-11-2025,11830,12,4,Low,65,7689.5,Send follow-up reminder
+Client_30 GmbH,INV030,Unpaid,24-12-2025,7304,19,0,High,90,6573.6,Contact client immediately & escalate
+Client_31 GmbH,INV031,Late,26-12-2025,12577,14,2,Medium,75,9432.75,Send follow-up reminder
+Client_32 GmbH,INV032,Late,26-11-2025,10019,16,4,Low,80,8015.2,Contact client immediately & escalate
+Client_33 GmbH,INV033,Unpaid,20-12-2025,12560,8,4,Low,65,8164,Send follow-up reminder
+Client_34 GmbH,INV034,Late,01-01-2026,9543,17,1,Low,70,6680.1,Send follow-up reminder
+Client_35 GmbH,INV035,Paid,01-12-2025,8930,0,0,Medium,10,893,No immediate action required
+Client_36 GmbH,INV036,Unpaid,26-11-2025,6593,27,1,Medium,80,5274.4,Contact client immediately & escalate
+Client_37 GmbH,INV037,Late,15-12-2025,5266,30,2,Low,80,4212.8,Contact client immediately & escalate
+Client_38 GmbH,INV038,Unpaid,10-12-2025,11348,0,1,Medium,50,5674,Send follow-up reminder
+Client_39 GmbH,INV039,Late,03-12-2025,11085,21,4,Low,80,8868,Contact client immediately & escalate
+Client_40 GmbH,INV040,Unpaid,14-01-2026,4489,23,4,Low,40,1795.6,Monitor client & follow-up if needed
