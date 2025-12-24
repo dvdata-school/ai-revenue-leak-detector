@@ -15,7 +15,7 @@ st.caption("Identify revenue risks before they become losses")
 # ---------------- LOAD DATA ----------------
 DATA_FILE = Path(__file__).parent / "AI_Revenue_Leak_Dataset_Processed.xlsx"
 
-df = pd.read_excel(DATA_FILEengine="openpyxl")
+df = pd.read_excel(DATA_FILE, engine="openpyxl")
 
 
 
@@ -139,6 +139,7 @@ st.dataframe(priority_view, use_container_width=True)
 # ---------------- FULL DATA ----------------
 with st.expander("View Full Dataset"):
     st.dataframe(df_filtered, use_container_width=True)
+
 
 
 
