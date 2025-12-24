@@ -1,4 +1,3 @@
-pip install openpyxl
 import streamlit as st
 import pandas as pd
 from pathlib import Path
@@ -140,6 +139,7 @@ st.dataframe(priority_view, use_container_width=True)
 # ---------------- FULL DATA ----------------
 with st.expander("View Full Dataset"):
     st.dataframe(df_filtered, use_container_width=True)
+
 
 
 
