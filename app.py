@@ -13,10 +13,10 @@ st.title("💰 Revenue Leak Detector")
 st.caption("Identify revenue risks before they become losses")
 
 # ---------------- LOAD DATA ----------------
-DATA_FILE = Path(__file__).parent / "AI_Revenue_Leak_Dataset_Processed.csv"
+DATA_FILE = Path(__file__).parent / "AI_Revenue_Leak_Dataset_Processed.xls"
 
+df = pd.read_excel(DATA_FILE, engine="xlrd")
 
-df = pd.read_csv(DATA_FILE, sep=";",engine="python")
 df.columns = df.columns.str.strip().str.replace(" ", "_")
 
 st.write("Detected columns:", list(df.columns))
@@ -136,6 +136,7 @@ st.dataframe(priority_view, use_container_width=True)
 # ---------------- FULL DATA ----------------
 with st.expander("View Full Dataset"):
     st.dataframe(df_filtered, use_container_width=True)
+
 
 
 
